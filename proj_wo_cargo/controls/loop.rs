@@ -7,4 +7,12 @@ fn main ()
     summe += x; 
     println!("Accum. sum = {}", summe); 
   }
+
+  summe = 0; 
+  println!("Now, reverse sum. "); 
+  for x in (1..10).rev() // Not hs-way 1,2,3,..10, but 1 to 9!!! (Python way)
+  {
+    summe += x; 
+    println!("Accum. sum = {}", summe); 
+  }
 }
