@@ -8,11 +8,13 @@ fn main()
   println!("Qing shuru shuzi. ");
 
   let suijishu = rand::thread_rng().gen_range(1, 101); 
+  let mut i_guess = 0; 
 
 
   // println!("Nin shuru de shi {}. ", caide); 
   loop 
   {
+    i_guess += 1; 
     let mut caide = String::new(); 
     io::stdin().read_line(&mut caide).expect("Shuru you-wu, qing chong shu. "); 
     let mut caideshu: u32 = match caide.trim().parse()
@@ -27,7 +29,8 @@ fn main()
     let threshold = 95; 
     let mut word = String::new(); 
 
-    println!("Deciser = {}", deciser); 
+    // println!("Deciser = {}", deciser); 
+    println!("Di {} ci caice. ", i_guess); 
 
     match caideshu.cmp(&suijishu)
     {
